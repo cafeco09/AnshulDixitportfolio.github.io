@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Frontier research prototype: governance approach, evidence safeguards, limitations and responsible-AI framework references.">
+<title>Governance &amp; Assurance | Frontier Research Laboratory</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{--ink:#181818;--muted:#71716b;--line:#deded6;--paper:#f7f7f2;--white:#fff}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.6 'DM Sans',system-ui,sans-serif}button,input,textarea,select{font:inherit}button,a,summary{-webkit-tap-highlight-color:transparent}button,summary{cursor:pointer}a{color:inherit;text-underline-offset:4px}header{padding:23px 5%;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:20px;background:var(--paper)}.brand{text-decoration:none;font:600 12px 'Space Grotesk',sans-serif;letter-spacing:1.6px;display:flex;gap:15px;align-items:center}.symbol{display:grid;place-items:center;background:var(--ink);color:white;width:34px;height:36px;font-size:24px;letter-spacing:-2px;padding-right:3px}.divider{color:#aaa}.muted{color:var(--muted);font-weight:400}.connections{display:flex;gap:22px;font-size:11px;color:var(--muted)}main{max-width:1380px;margin:auto;padding:0 5%}.intro{padding:54px 0 38px;position:relative}.eyebrow,.field-caption{font-size:10px;font-weight:600;letter-spacing:1.8px;color:var(--muted)}h1{font:500 clamp(35px,4.2vw,60px)/1.08 'Space Grotesk',sans-serif;letter-spacing:-2.8px;margin:18px 0}h1 span{color:#8c8c82}.lede{position:absolute;right:0;bottom:45px;color:var(--muted);max-width:335px;font-size:13px}.version-tabs{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:10px 10px 0 0;overflow:hidden}.version-tabs button{position:relative;text-align:left;border:0;border-right:1px solid var(--line);padding:19px 26px;background:#efefe8;display:grid;grid-template-columns:25px 1fr;column-gap:12px;align-items:center}.version-tabs button:last-child{border-right:0}.version-tabs button[aria-selected=true]{background:var(--ink);color:#fff}.version-tabs button>span{grid-row:span 2;font:11px 'Space Grotesk';opacity:.5}.version-tabs strong{font:500 19px 'Space Grotesk';letter-spacing:-.5px}.version-tabs small{opacity:.6;font-size:11px}.lab{display:grid;grid-template-columns:1fr 1.13fr;border:1px solid var(--line);border-top:0;background:var(--white);border-radius:0 0 10px 10px;overflow:hidden}.inputs,.outputs{padding:28px 30px}.inputs{border-right:1px solid var(--line)}.outputs{background:#fdfdfa}.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}h2{font:500 18px 'Space Grotesk';margin:0;letter-spacing:-.4px}.tag{font:500 9px 'Space Grotesk';letter-spacing:.8px;border:1px solid var(--line);border-radius:3px;padding:5px 7px;white-space:nowrap}.note{color:var(--muted);font-size:12px;line-height:1.7;margin:14px 0 23px}label{display:block;font-size:12px;font-weight:600;margin:18px 0 9px}textarea,select{width:100%;border:1px solid #d6d6ce;border-radius:5px;padding:13px;background:#fff;resize:vertical;line-height:1.6;color:var(--ink)}textarea:focus,select:focus{outline:2px solid #444;outline-offset:2px}.presets{display:flex;gap:6px;flex-wrap:wrap}.presets button,#check-bridge,#download-result{border:1px solid var(--line);border-radius:4px;background:white;padding:6px 10px;font-size:11px}.presets button:hover{border-color:var(--ink)}.retrieval-box{display:flex;gap:12px;border:1px dashed var(--line);border-radius:5px;padding:15px;margin:23px 0 18px}.retrieval-box strong{font-size:12px}.retrieval-box p{margin:3px 0 0;font-size:11px;color:var(--muted)}.arrow{font-size:22px}.run{background:var(--ink);color:#fff;border:0;border-radius:5px;padding:14px 17px;text-align:left;width:100%;display:flex;justify-content:space-between;align-items:center;font-weight:500}.run:hover{background:#363630}.run:disabled{opacity:.5;cursor:wait}.small{font-size:10px;line-height:1.7;color:var(--muted)}#progress{font-size:12px;min-height:20px}details{border-top:1px solid var(--line);padding-top:14px;margin:20px 0}summary{font-size:12px;font-weight:500}ol{padding-left:18px;font-size:12px;color:var(--muted)}li{margin:9px 0}.empty{text-align:center;padding:70px 0 90px;color:var(--muted)}.orbit{display:block;font:70px 'Space Grotesk';color:#b6b6a9}.empty h3{font:500 20px 'Space Grotesk';color:var(--ink);margin:19px 0 10px}.empty p{font-size:12px}.flow{display:flex;justify-content:center;gap:9px;align-items:center;margin-top:38px;font-size:10px}.flow span{border:1px solid var(--line);padding:7px 10px;border-radius:4px}.flow b{font-weight:400}.answer{font:400 17px/1.8 'DM Sans';white-space:pre-wrap;margin:25px 0}.source-title{font:500 13px 'Space Grotesk';border-top:1px solid var(--line);padding-top:20px}.source{padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:13px;align-items:flex-start}.source .number{font-size:10px;color:var(--muted)}.source a{font-size:12px;text-decoration:none;overflow-wrap:anywhere}.source p{font-size:10px;color:var(--muted);margin:3px 0}.branch-scores{display:grid;grid-template-columns:1fr 1fr;gap:10px}.branch{border:1px solid var(--line);padding:13px;border-radius:5px}.branch strong{display:block;font:500 27px 'Space Grotesk'}.branch p{font-size:10px;color:var(--muted);margin:3px 0}.branch span{font-size:11px}pre{max-height:400px;overflow:auto;font:10px/1.6 ui-monospace,monospace;background:#efefe8;padding:15px;white-space:pre-wrap;overflow-wrap:anywhere}footer{position:relative;margin:28px 0 40px;padding-right:130px;color:var(--muted);font-size:10px}footer p{margin:4px 0}footer>a{position:absolute;right:0;top:0}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}[hidden]{display:none!important}button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid #777;outline-offset:3px}@media(max-width:900px){.lede{position:static;max-width:100%;margin-top:20px}.intro{padding-top:34px}h1{letter-spacing:-1.7px}.connections{flex-direction:column;gap:2px}.lab{grid-template-columns:1fr}.inputs{border-right:0;border-bottom:1px solid var(--line)}.version-tabs button{padding:15px 12px;grid-template-columns:1fr}.version-tabs button>span{display:none}.version-tabs strong{font-size:15px}.version-tabs small{font-size:9px}.empty{padding:40px 0 60px}}@media(max-width:480px){header{padding:15px 5%}.brand{gap:8px;letter-spacing:.7px;font-size:10px}.brand .muted,.divider{display:none}.connections{font-size:9px}.inputs,.outputs{padding:23px 20px}main{padding:0 4%}.tag{font-size:8px}.flow{gap:5px}.flow span{padding:6px}.answer{font-size:15px}}
+.version-tabs{grid-template-columns:repeat(4,1fr)}.version-tabs button{display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:18px}.version-tabs strong{font-size:16px;line-height:1.3}.agent-panel{border:1px solid var(--line);border-top:0;padding:32px;background:white;display:grid;grid-template-columns:1fr 1fr;gap:50px}.agent-panel h3{font:500 17px 'Space Grotesk'}.agent-panel li{padding:8px;border-bottom:1px solid var(--line)}.secondary{background:white;border:1px solid #ccc;border-radius:4px;padding:10px 14px;margin:10px 0;font-size:12px}.camera-preview{background:#efefe8;border:1px solid var(--line);border-radius:5px;margin:18px 0 10px;overflow:hidden}.camera-preview canvas,.camera-preview video{width:100%;height:auto;display:block}#road-scene{background:#eee;border:1px solid #ddd;border-radius:5px;width:100%;margin-top:15px}#road-frame{width:100%}.check-label{font-weight:400;font-size:12px;display:flex;gap:8px;align-items:center}#run-physical{margin-top:24px}#run-study-example{width:100%}@media(max-width:900px){.version-tabs{grid-template-columns:repeat(2,1fr)}.version-tabs button{border-bottom:1px solid var(--line)}.agent-panel{grid-template-columns:1fr;gap:15px}.version-tabs strong{font-size:14px}}
+.version-tabs{grid-template-columns:repeat(5,1fr)}.version-tabs strong{font-size:14px}.version-tabs small{font-size:10px}.files-panel{background:white;border:1px solid var(--line);border-top:0;padding:32px}.files-panel>p{max-width:850px;color:var(--muted);font-size:13px}.download-pack{display:inline-block;background:#181818;color:white;text-decoration:none;border-radius:4px;padding:12px 18px;margin:15px 0 25px}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:12px}th{text-align:left;background:#f2f2ec}td,th{padding:15px;border-bottom:1px solid var(--line);vertical-align:top}td code{font-size:11px;overflow-wrap:anywhere}td button{font-size:11px;border:1px solid #ccc;border-radius:4px;padding:8px;background:white;white-space:normal}.file-nudge{border:1px solid var(--line);padding:14px;border-radius:5px;background:#f7f7f2;margin-bottom:20px}.file-nudge>strong{font-size:12px}.file-nudge label{font-size:11px;margin-top:12px}.file-nudge input{max-width:100%;font-size:11px}.file-nudge p{font-size:11px;color:var(--muted);overflow-wrap:anywhere}.file-nudge .secondary{margin-bottom:0}@media(max-width:1000px){.version-tabs{grid-template-columns:repeat(3,1fr)}}@media(max-width:600px){.version-tabs{grid-template-columns:repeat(2,1fr)}.files-panel{padding:22px 18px}td,th{padding:10px}}
+
+.evidence-visuals{margin:20px 0}.evidence-visuals figure{margin:0 0 20px;padding:12px;border:1px solid #d5d5cc;border-radius:10px;background:white}.evidence-visuals img{display:block;width:100%;height:auto}.evidence-visuals figcaption{font-size:13px;line-height:1.6;margin:12px 0;color:#444}.evidence-visuals button{font-size:12px;padding:9px 12px}
+
+.study-question-suggestions{margin:12px 0 24px}.study-question-suggestions>p:first-child{font-size:12px;font-weight:600;margin:0 0 10px}.study-question-suggestions [role=group]{display:grid;gap:8px}.study-question-suggestions button{text-align:left;font:inherit;font-size:12px;line-height:1.5;padding:10px 12px;background:#fafaf7;border:1px solid var(--line);border-radius:6px;cursor:pointer;white-space:normal}.study-question-suggestions button:hover,.study-question-suggestions button[aria-pressed=true]{background:#efefe8;border-color:#222}.study-question-suggestions button:focus-visible{outline:2px solid #222;outline-offset:2px}
+
+</style>
+<style>
+:root {color-scheme:light}
+.assurance-page{max-width:1070px;margin:auto;padding:44px 5% 86px}
+.assurance-header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 5%;border-bottom:1px solid var(--line);background:var(--paper)}
+.assurance-header .brand{display:inline-flex;align-items:center}
+.assurance-nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.assurance-nav a{font-size:12px;font-weight:600;text-decoration:none}
+.assurance-nav a[aria-current=page]{text-decoration:underline;text-underline-offset:5px}
+.assurance-kicker{font:600 11px 'Space Grotesk',system-ui,sans-serif;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted)}
+.assurance-page h1{font:500 clamp(36px,5vw,58px)/1.12 'Space Grotesk',system-ui,sans-serif;letter-spacing:-2px;max-width:850px;margin:14px 0 20px}
+.assurance-page h2{font:500 24px 'Space Grotesk',system-ui,sans-serif;letter-spacing:-.4px;margin:0 0 12px}
+.assurance-page h3{font:600 16px 'Space Grotesk',system-ui,sans-serif;margin:0 0 8px}
+.assurance-page p,.assurance-page li{font-size:14px;line-height:1.75}
+.assurance-lede{font-size:16px!important;max-width:780px}
+.assurance-lead{padding-bottom:32px;border-bottom:1px solid var(--line)}
+.assurance-meta{font-size:12px;color:var(--muted)}
+.assurance-section{padding-top:38px}
+.assurance-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}
+.assurance-card{background:var(--white);border:1px solid var(--line);padding:21px;border-radius:10px}
+.assurance-card p{margin:7px 0 0}
+.assurance-status{font:600 10px 'Space Grotesk',system-ui,sans-serif;letter-spacing:1px;color:#53534e;text-transform:uppercase}
+.assurance-banner{background:#eeeee7;padding:20px 22px;border-left:3px solid var(--ink);margin:25px 0;border-radius:3px}
+.assurance-banner p{margin:7px 0}
+.assurance-table{width:100%;border-collapse:collapse;font-size:13px;background:#fff}
+.assurance-table th{text-align:left;font-weight:600;background:#eeeee8}
+.assurance-table th,.assurance-table td{border-bottom:1px solid var(--line);padding:14px 12px;vertical-align:top;line-height:1.6}
+.assurance-table th:first-child{width:26%}
+.assurance-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.assurance-links a{display:block;border:1px solid var(--line);padding:15px;background:#fff;border-radius:7px;font-size:13px}
+.assurance-notes{padding-left:22px}
+.assurance-page a:focus-visible,.assurance-header a:focus-visible{outline:3px solid #383838;outline-offset:4px}
+.assurance-footer{max-width:1070px;margin:auto;padding:25px 5% 45px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.assurance-footer a{margin-right:20px}
+@media(max-width:700px){.assurance-cards,.assurance-links{grid-template-columns:1fr}.assurance-table{display:block;overflow-x:auto}.assurance-page{padding-top:30px}.assurance-header{align-items:flex-start}.assurance-page h1{letter-spacing:-1px}}
+</style>
+</head>
+<body>
+<header class="assurance-header">
+<a class="brand" href="../index.html"><span class="symbol">F.</span> FRONTIER <span class="divider">/</span><span class="muted">RESEARCH LABORATORY</span></a>
+<nav class="assurance-nav" aria-label="Primary navigation">
+<a href="../index.html">Portfolio</a>
+<a href="index.html" aria-current="page">Governance &amp; Assurance</a>
+</nav>
+</header>
+<main class="assurance-page" id="main">
+<section class="assurance-lead" aria-labelledby="page-title">
+<p class="assurance-kicker">Research accountability / Open evidence</p>
+<h1 id="page-title">Governance &amp; assurance</h1>
+<p class="assurance-lede">How Frontier approaches evidence, uncertainty, reasoning and responsible evaluation — and what the research prototype has <strong>not</strong> established.</p>
+<p class="assurance-meta">Status: experimental research | Reviewed: 17 November 2026 | Standalone public reference page. This page is descriptive, not a live audit or certification.</p>
+<div class="assurance-banner" role="note">
+<strong>Research prototype — not a safety or compliance certificate.</strong>
+<p>Passing unit tests, returning source citations or generating a plausible explanation does not establish that a result is correct or that a system is safe for consequential decisions.</p>
+</div>
+</section>
+<section class="assurance-section" aria-labelledby="principles">
+<h2 id="principles">Current design safeguards</h2>
+<div class="assurance-cards">
+<article class="assurance-card"><span class="assurance-status">Design safeguard</span><h3>Source-bound evidence</h3><p>Reasoning uses source references, evidence identifiers and mapping records where the relevant pipeline provides them. A retrieved webpage or quoted name is not automatically a verified fact.</p></article>
+<article class="assurance-card"><span class="assurance-status">Design safeguard</span><h3>Explicit uncertainty</h3><p>The architecture distinguishes supported, opposed, conflicting and unknown states. Unsupported conclusions should remain unresolved instead of being presented as certain.</p></article>
+<article class="assurance-card"><span class="assurance-status">Design safeguard</span><h3>Bounded inference</h3><p>Some reasoning paths use limited iterations and constrained logical relationships. Temporal order alone is not evidence of causation; visual localisation is not a diagnosis.</p></article>
+<article class="assurance-card"><span class="assurance-status">Research control</span><h3>Review before core changes</h3><p>Experimental structural updates require acceptance and validation conditions. These flags are not yet a fully authenticated, independently audited approval system.</p></article>
+</div>
+<p>The standalone OM research engine is developed separately from Frontier. This research demonstration must not be interpreted as automatically running every change in the private OM research branch.</p>
+</section>
+<section class="assurance-section" aria-labelledby="scope">
+<h2 id="scope">What each demonstration can — and cannot — establish</h2>
+<table class="assurance-table">
+<thead><tr><th>Area</th><th>Intended research output</th><th>Limit of interpretation</th></tr></thead>
+<tbody>
+<tr><td>General reasoning</td><td>Structured questions, candidate relations, evidence mapping and source-linked answers.</td><td>Source overlap or syntactic validity does not prove semantic entailment or factual accuracy.</td></tr>
+<tr><td>Road safety</td><td>Frame-level movement, contact and interaction observations where supported by the submitted images.</td><td>Observational contact alone does not confirm a physical collision, casualty severity or a safe operational response.</td></tr>
+<tr><td>Medical and microscopy</td><td>Experimental image-region measurements and study-evidence checks.</td><td>Not a diagnostic medical device or a clinical opinion. Do not use results for treatment decisions.</td></tr>
+<tr><td>Wheelchair accessibility</td><td>Pavement-image surface and geometry review flags.</td><td>Single images cannot reliably establish clearances, kerb heights, gradients or real-world route passability.</td></tr>
+<tr><td>Natural disasters</td><td>Exploratory image signatures and historical-event comparisons.</td><td>Appearance flags are not earthquake forecasts, hazard probabilities or validated early warnings.</td></tr>
+</tbody>
+</table>
+</section>
+<section class="assurance-section" aria-labelledby="privacy">
+<h2 id="privacy">Uploads, privacy and external services</h2>
+<div class="assurance-banner">
+<strong>Before uploading:</strong>
+<p>Use synthetic, public or appropriately authorised research material. Avoid uploading identifiable people, confidential records or patient information until processing and retention arrangements are confirmed for the relevant backend.</p>
+</div>
+<p>The Frontier interface can contact remote processing services and may use browser-assisted retrieval for public web sources. Files and questions should therefore <strong>not</strong> be assumed to remain on your device. Specific data retention periods, storage locations, deletion guarantees and third-party processing terms have not been independently verified in this review.</p>
+<p>A static GitHub Pages frontend is not equivalent to a fully local or offline system. Browser-based retrieval and backend requests have different processing paths. Users should check the processing context before submitting sensitive material.</p>
+</section>
+<section class="assurance-section" aria-labelledby="open">
+<h2 id="open">Open assurance questions</h2>
+<ul class="assurance-notes">
+<li>Independent unseen-domain, adversarial and prompt-injection evaluations.</li>
+<li>Authenticated approval records and rollback for structural core updates.</li>
+<li>Documented data flow, retention, permissions and privacy impact assessment.</li>
+<li>Domain-specific performance measures, human review procedures and incident management.</li>
+<li>Accessibility testing of the interface, including keyboard and assistive technology checks.</li>
+</ul>
+<p>These remain priorities for the next stage of evaluation. They are not represented as already completed.</p>
+</section>
+<section class="assurance-section" aria-labelledby="frameworks">
+<h2 id="frameworks">International reference frameworks</h2>
+<p>The frameworks below inform research evaluation. Their appearance here does not indicate institutional endorsement, ISO certification or legal compliance.</p>
+<div class="assurance-links">
+<a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer">NIST AI Risk Management Framework — voluntary risk-management guidance</a>
+<a href="https://oecd.ai/en/ai-principles" target="_blank" rel="noopener noreferrer">OECD AI Principles — responsible and trustworthy AI</a>
+<a href="https://www.unesco.org/en/artificial-intelligence/recommendation-ethics" target="_blank" rel="noopener noreferrer">UNESCO Recommendation on AI Ethics — human rights and accountability</a>
+<a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener noreferrer">EU AI Act — legal obligations depending on use and classification</a>
+<a href="https://www.iso.org/standard/81230.html" target="_blank" rel="noopener noreferrer">ISO/IEC 42001 — AI management-system standard</a>
+<a href="https://www.aisi.gov.uk/" target="_blank" rel="noopener noreferrer">UK AI Security Institute — evaluations and AI security research</a>
+</div>
+</section>
+</main>
+<footer class="assurance-footer">
+<p>Frontier is an experimental research architecture. This webpage explains current design intentions and outstanding evidence needs.</p>
+<a href="../index.html">Return to portfolio</a>
+<a href="https://github.com/cafeco09/frontier-chatbot" target="_blank" rel="noopener noreferrer">Repository (access may be restricted)</a>
+</footer>
+</body></html>
